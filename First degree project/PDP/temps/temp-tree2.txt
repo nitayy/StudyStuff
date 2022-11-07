@@ -1,0 +1,45 @@
+"""
+
+                    for move in board.empty:
+            print(board.empty, " trtr", move)
+            b=copy.deepcopy(board)
+            key={}
+            b.ins(move,sign)
+            #If the game was finish:
+            if (self.is_win(b,'x') or self.is_win(b,'o')):
+                return 2**(b.s**2+1)
+            elif (not b.is_full()):
+                temp = self.control(b)
+                t = temp[sign] - temp[xo.opp_sign(sign)]
+                if (myTurn):
+                    return t
+                else:
+                    return -t
+            else:
+                key[move] = self.minimax(b, depth + 1, not myTurn, xo.opp_sign(sign))
+
+            if (self.is_win(b,sign)):
+                print("===========================")
+                b.show()
+                print((b.s**2+1)-depth,(b.s**2)+1,depth)
+                print("===========================")
+                return ()
+            elif (self.is_win(b,xo.opp_sign(sign))):
+                print("===========================")
+                b.show()
+                print((b.s**2 + 1) - depth,(b.s**2)+1,depth)
+                print("===========================")
+                return  (depth-(b.s**2+1))
+            elif (b.is_full()): return  0
+            key[move]=self.minimax(b,depth+1,not myTurn,xo.opp_sign(sign))
+            """
+        #Choosing the move:
+        print("Depth = ",depth,key)
+        li = list(key.items())
+        steps = []
+        for i in li:
+            t = (i[1], i[0])
+            steps.append(t)
+        steps.sort()
+        if (myTurn): steps.reverse() #The tree turn
+        return steps[0][1]

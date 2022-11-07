@@ -1,0 +1,57 @@
+
+def update_s(v,sign):
+    """
+    Update a vector of booleans.
+    :param v: The vector.
+    :param sign: The sign.
+    :return: A vector at the same len.
+    """
+
+    if len(v) == 8 and sign in ['x','o']:
+        if v[0]:
+            v[0]=False
+            v[1] = True if sign=='x' else v[5] = True
+        else:
+            if v[4]: return v
+            if v[1] and sign=='x':
+                v[1]=False
+                v[2]=True
+                return v
+            if v[2] and sign=='x':
+                v[2]=False
+                v[3]=True
+                return v
+            if v[5] and sign=='x':
+                v[5]=False
+                v[4]=True
+                return v
+            if v[6] and sign=='x':
+                v[6]=False
+                v[4]=True
+                return v
+            if v[7] and sign=='x':
+                v[7]=False
+                v[4]=True
+                return v
+            # ------ o ----------------
+            if v[1] and sign=='o':
+                v[1]=False
+                v[4]=True
+                return v
+            if v[2] and sign=='o':
+                v[2]=False
+                v[4]=True
+                return v
+            if v[3] and sign=='o':
+                v[3]=False
+                v[4]=True
+                return v
+            if v[5] and sign=='o':
+                v[5]=False
+                v[6]=True
+                return v
+            if v[6] and sign=='o':
+                v[6]=False
+                v[7]=True
+                return v
+

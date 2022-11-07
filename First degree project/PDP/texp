@@ -1,0 +1,34 @@
+ # # No we will update the hidden units
+        # r=int(math.sqrt(size()))
+        # def wins_opp(xo):
+        #     w = []
+        #     for i in range(1,r+1):
+        #         w.append(xo.get_row(i))
+        #     w.append(xo.get_diag1())
+        #     w.append(xo.get_diag2())
+        #     for i in range(1,r+1):
+        #         w.append(xo.get_col(i))
+        #     return w
+        #
+        # w = wins_opp(self.eb)
+        # for i in range(len(w)): # "i" is the no. of the winning series. i.e. 0 - the first row, 0 - the middle row.
+        #     n=w[i].count(self.e_sign)
+        #     if (n==1):
+        #         self.sin_ene.turn_on(i)
+        #         self.empty.turn_off(i)
+        #     elif (n==2):
+        #         self.dub_ene.turn_on(i)
+        #         #self.sin_ene.turn_off(i)
+        #
+        # w=wins_opp(self.fb)
+        # for i in range(len(w)):
+        #     k = w[i].count(self.f_sign)
+        #     if (k == 1):
+        #         self.sin_fri.turn_on(i)
+        #         self.empty.turn_off(i)
+        #     elif (k == 2):
+        #         self.dub_fri.turn_on(i)
+        #         #self.sin_fri.turn_off(i)
+        #         #As we can see at the diagrams - if the dub. is turn on, also the sin. is turn on.
+        # # Reset the output board
+        # self.output.reset()

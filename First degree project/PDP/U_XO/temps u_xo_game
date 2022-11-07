@@ -1,0 +1,96 @@
+ # def ins2(self,num_s,sign):
+    #     """
+    #     The function doing same as "ins" but the difference is it gets a number between 1-81.
+    #     ** This insertion function is also followed by the game rules! The function changing the self.bo **
+    #     ** This function DOESN'T change the boards signs!! **
+    #     :param num_s: The square.
+    #     :param sign: The sign.
+    #     :return: True if succeeded else otherwise.
+    #     """
+    #     if num_s in self.free_sqrs():
+    #         b,s=tools.to_2n(num_s)
+    #         self.bo = s if s in self.valid_boards else 0
+    #         if self.ins(b,s,sign):
+    #             if check_for_win(self.board[b],sign):
+    #                 self.main_b.ins(b,sign)
+    #                 if b in self.valid_boards: self.valid_boards.remove(b)
+    #             if check_for_draw(self.board[b]):
+    #                 self.main_b.ins(b, 'd')
+    #                 if b in self.valid_boards: self.valid_boards.remove(b)
+    #             return True
+    #         else:
+    #             return False
+    #     else:
+    #         return False
+    #
+    # # --------------------------------------------------------------------------------------------------------
+    #
+    # def ins3(self,num_s,sign):
+    #     """
+    #     The function doing same as "ins" but the difference is it gets a number between 1-81.
+    #     ** This insertion function is also followed by the game rules! The function changing the self.bo **
+    #
+    #     :param num_s: The square.
+    #     :param sign: The sign.
+    #     :return: True if succeeded else otherwise.
+    #     """
+    #     b,s=tools.to_2n(num_s)
+    #     #self.bo = s if s in self.valid_boards else 0
+    #     self.bo=s
+    #     self.ins(b,s,sign)
+    #     if check_for_win(self.board[b],sign):
+    #         self.main_b.ins(b,sign)
+    #         #self.valid_boards.remove(b)
+    #     if check_for_draw(self.board[b]):
+    #         self.main_b.ins(b, 'd')
+    #         #self.valid_boards.remove(b)
+    #
+    #
+
+    #----------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+# --------------------------------------------------------------------------------------------------------
+    #
+    # def is_win(self, sign):
+    #     """
+    #     The function inserts a symbol to the board and updates the the main board if needed.
+    #     :param sign: the sign
+    #     :return: If there is a winner for the whole game  - the sign, if draw - 'd', else - None
+    #     """
+    #     # Checks if the player wins:
+    #     if (self.bo==0): return None
+    #     if (check_for_win(self.board[self.bo], sign)):
+    #         if self.bo in self.valid_boards: self.valid_boards.remove(self.bo)
+    #         self.main_b.ins(self.bo, sign)
+    #         self.board[self.bo].flip_all('X' if sign == 'x' else 'O')
+    #         self.bo = 0
+    #         if (check_for_win(self.main_b, sign)):
+    #             return sign
+    #     elif (check_for_draw(self.board[self.bo])):
+    #         self.board[self.bo].flip_all('D')
+    #         self.main_b.ins(self.bo, 'd')
+    #         if self.bo in self.valid_boards: self.valid_boards.remove(self.bo)
+    #     if (check_for_draw(self.main_b)):
+    #         return 'd'
+    #     else:
+    #         return None
+    #
+    # # --------------------------------------------------------------------------------------------------------
+    #
+    # def is_win_main(self):
+    #     if check_for_draw(self.main_b): return 'd'
+    #     if check_for_win(self.main_b,'x'): return 'x'
+    #     if check_for_win(self.main_b,'o'): return 'o'
+    #     else: return None
+
+    # --------------------------------------------------------------------------------------------------------
+
